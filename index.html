@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="counter">10,000 seconds</div>
+        <h2>Contribute and get the Job</h2>
+        <h1>Open Source Weather App</h1>
+        <div class="weather-icon">
+            <img src="weather-app.png" width="30px" height="30px">
+        </div>
+        <div class="temperature">25°C</div>
+        <p class="location">City, Country</p>
+        <div class="details">
+            <p class="humidity">Humidity: 65%</p>
+            <p class="wind">Wind: 10 km/h</p>
+        </div>
+        <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+        </form>
+    </div>
+    
+    <div id="weatherContainer">
+        <!-- Weather information will be displayed here -->
+    </div>
+    <script>
+        const counterElement = document.querySelector(".counter");
+
+        // Function to update the counter
+        const updateCounter = () => {
+            let seconds = 10000;
+
+            const countInterval = setInterval(() => {
+                seconds--;
+                counterElement.textContent = `${seconds} seconds`;
+
+                if (seconds <= 0) {
+                    clearInterval(countInterval);
+                    counterElement.textContent = "Time's up!";
+                }
+            }, 1000);
+        };
+        updateCounter();
+    </script>
+</body>
+
+</html>
