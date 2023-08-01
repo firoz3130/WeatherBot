@@ -2,8 +2,8 @@ const cityName = document.getElementById('cityInput');
 const weatherForm = document.getElementById('weatherForm');
 const corApiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const apiUrl = 'f629de57de5bdf5d3cf3325a799d4da0'; // Replace this with your actual API key
-
+ // Replace this with your actual API key
+const apiUrl=process.env.API_URL;
 const getCoordinates = async (city) => {
   try {
     const data = await fetch(`${corApiUrl}${city}&limit=5&appid=${apiUrl}`);
