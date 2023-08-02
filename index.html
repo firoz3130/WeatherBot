@@ -32,13 +32,17 @@
 
     </div>
     <script>
-        const weatherForm = document.getElementById("#weatherForm");
-        const weatherBtn=document.getElementById("getWeather");
+        const weatherForm = document.getElementById("weatherForm");
+        weatherForm.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            const weatherBtn=document.getElementById("getWeather");
         const weatherContainer = document.getElementById("weatherContainer");
         const cityIns = document.getElementById("cityInput");
         const city = cityIns.value;
         console.log(cityIns)
         console.log(city);
+        })
+        
         const counterElement = document.querySelector(".counter");
         // Function to update the counter
         const updateCounter = () => {
