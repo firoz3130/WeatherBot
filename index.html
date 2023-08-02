@@ -24,16 +24,22 @@
         </div>
         <form id="weatherForm">
             <input type="text" id="cityInput" placeholder="Enter city name" required>
-            <button type="submit">Get Weather</button>
+            <button type="submit" id="getWeather">Get Weather</button>
         </form>
     </div>
     
     <div id="weatherContainer">
-        <!-- Weather information will be displayed here -->
+
     </div>
     <script>
+        const weatherForm = document.getElementById("#weatherForm");
+        const weatherBtn=document.getElementById("getWeather");
+        const weatherContainer = document.getElementById("weatherContainer");
+        const cityIns = document.getElementById("cityInput");
+        const city = cityIns.value;
+        console.log(cityIns)
+        console.log(city);
         const counterElement = document.querySelector(".counter");
-
         // Function to update the counter
         const updateCounter = () => {
             let seconds = 10000;
