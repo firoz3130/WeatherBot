@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Source Weather App</title>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,53 +14,27 @@
         <div class="counter">10,000 seconds</div>
         <h2>Contribute and get the Job</h2>
         <h1>Open Source Weather App</h1>
+        <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter city name" required>
+            <button type="submit" id="getWeather">Get Weather</button>
+        </form>
         <div class="weather-icon">
             <img src="weather-app.png" width="30px" height="30px">
         </div>
-        <div class="temperature">25°C</div>
+        <div class="min_temperature">25°C</div>
+        <div class="max_temperature">25°C</div>
         <p class="location">City, Country</p>
         <div class="details">
             <p class="humidity">Humidity: 65%</p>
             <p class="wind">Wind: 10 km/h</p>
         </div>
-        <form id="weatherForm">
-            <input type="text" id="cityInput" placeholder="Enter city name" required>
-            <button type="submit" id="getWeather">Get Weather</button>
-        </form>
+        
     </div>
-    
+
     <div id="weatherContainer">
 
     </div>
-    <script>
-        const weatherForm = document.getElementById("weatherForm");
-        weatherForm.addEventListener('submit',(event)=>{
-            event.preventDefault();
-            const weatherBtn=document.getElementById("getWeather");
-        const weatherContainer = document.getElementById("weatherContainer");
-        const cityIns = document.getElementById("cityInput");
-        const city = cityIns.value;
-        console.log(cityIns)
-        console.log(city);
-        })
-        
-        const counterElement = document.querySelector(".counter");
-        // Function to update the counter
-        const updateCounter = () => {
-            let seconds = 10000;
-
-            const countInterval = setInterval(() => {
-                seconds--;
-                counterElement.textContent = `${seconds} seconds`;
-
-                if (seconds <= 0) {
-                    clearInterval(countInterval);
-                    counterElement.textContent = "Time's up!";
-                }
-            }, 1000);
-        };
-        updateCounter();
-    </script>
+    
 </body>
-
+<script src="weather.js"></script>
 </html>
