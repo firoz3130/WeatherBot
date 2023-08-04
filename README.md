@@ -8,11 +8,15 @@ You have to enter the name of place, on entering you will see the weather of tha
 1. Fork this repository.
 2. Clone the repository using command:
 
+    ```bash
     git clone https://github.com/<your-username>/WeatherBot.git
+    ```
 
 3. Install all the requirements using command:
 
+    ```bash
     npm install
+    ```
 
 4. Simply go live using live server or any other server.
 
