@@ -1,11 +1,12 @@
 require('dotenv').config();
 const weatherForm = document.getElementById('weatherForm');
-const weatherApi = process.env.API_URL;
+const weatherApi=process.env.API_URL;
 const min_temperature = document.getElementsByClassName('min_temperature')[0];
 const max_temperature=document.getElementsByClassName('max_temperature')[0];
 const locationElement = document.getElementsByClassName('location')[0];
 const humidityElement = document.getElementsByClassName('humidity')[0];
 const windElement = document.getElementsByClassName('wind')[0];
+const description=document.getElementById('weatherType')
 const apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}";
 
@@ -36,6 +37,7 @@ weatherForm.addEventListener('submit', async (e) => {
   locationElement.innerHTML = cityName+","+state+","+country;
   humidityElement.innerHTML = "Humidity: " + humidity + "%";
   windElement.innerHTML = "Wind: " + wind + " km/h";
+  description.innerHTML=whatWeatherNow;
 
   console.log(whatWeatherNow, humidity, pressure, temp_max, temp_min);
   console.log(feels_like + " and wind is " + wind + " km/hr");
