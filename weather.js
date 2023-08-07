@@ -45,4 +45,6 @@ weatherForm.addEventListener('submit', async (e) => {
   console.log(json[0]['lat']);
   console.log(json[0]['lon']);
   console.log(cityName);
+  console.log(state);
+  console.log(country);
 });
