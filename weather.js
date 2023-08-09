@@ -39,12 +39,5 @@ weatherForm.addEventListener('submit', async (e) => {
   windElement.innerHTML = "Wind: " + wind + " km/h";
   description.innerHTML=whatWeatherNow;
 
-  console.log(whatWeatherNow, humidity, pressure, temp_max, temp_min);
-  console.log(feels_like + " and wind is " + wind + " km/hr");
-  console.log("country is ",country," ",temp);
-  console.log(json[0]['lat']);
-  console.log(json[0]['lon']);
-  console.log(cityName);
-  console.log(state);
-  console.log(country);
+
 });
