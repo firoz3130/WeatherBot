@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
+async () => {
+    console.log("hello");
     // Launch a new browser instance
     const browser = await puppeteer.launch();
 
@@ -8,33 +9,17 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
 
     // Navigate to the Google Form URL
-    const formUrl = 'YOUR_FORM_URL_HERE';
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9H5187qU8RxyOB745fh3a7XF56BNvAo7w-sxKlakLgXbCkA/viewform?usp=sf_link';
     await page.goto(formUrl);
 
-    // Define the responses
-    const responses = [
-        // Format your responses here
-        // For example: "Yes", "No", "Yes", ...
-    ];
+    // After navigating to the page
+await page.waitForSelector('input[jsname="YPqjbf"]');
+await page.type('input[jsname="YPqjbf"]', 'firos@example.com');
 
-    // Loop to submit 25 responses
-    for (const response of responses) {
-        // Fill the name of the respondent
-        await page.type('input[name="entry.YOUR_NAME_FIELD_ID"]', 'Random Name');
+await page.waitForSelector('span[class="NPEfkd RveJvd snByac"]');
+await page.click('span[class="NPEfkd RveJvd snByac"]');
 
-        // Fill the surveyor's name
-        await page.type('input[name="entry.YOUR_SURVEYOR_FIELD_ID"]', 'Firos K');
-
-        // Select the appropriate response
-        await page.click(`label[data-value="${response}"]`);
-
-        // Click the submit button
-        await page.click('button[type="submit"]');
-
-        // Wait for 10 minutes before the next submission
-        await page.waitForTimeout(10 * 60 * 1000);
-    }
 
     // Close the browser
     await browser.close();
-})();
+};
