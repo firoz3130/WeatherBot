@@ -45,22 +45,29 @@ h2 {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ecf0f1;
   border-radius: 50%;
-  line-height: 100px;
+  line-height: 1;
+  font-size: 36px;
+  color: #3498db;
 }
 
 .location {
   color: #2c3e50;
-  margin-top: 5px;
+  margin-top: 15px;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .details {
   background-color: #f1c40f;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
 .humidity, .wind {
