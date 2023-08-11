@@ -91,7 +91,14 @@ button {
   border-radius: 5px;
   margin-top: 15px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
+
+button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
 
 .counter {
   color: #000000;
