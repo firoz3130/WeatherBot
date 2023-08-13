@@ -28,6 +28,7 @@ weatherForm.addEventListener('submit', async (e) => {
   const feels_like = (currentJson['main']['feels_like'] - 273.15).toFixed(2);
   const temp_min = (currentJson['main']['temp_min'] - 273.15).toFixed(2);
   const temp_max = (currentJson['main']['temp_max'] - 273.15).toFixed(2);
+  //console.log is removrd from the command
   const pressure = currentJson['main']['pressure'];
   const humidity = currentJson['main']['humidity'];
   const wind = ((currentJson['wind']['speed']) * 1.852).toFixed(2);
