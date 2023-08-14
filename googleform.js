@@ -12,7 +12,6 @@ async () => {
     const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9H5187qU8RxyOB745fh3a7XF56BNvAo7w-sxKlakLgXbCkA/viewform?usp=sf_link';
     await page.goto(formUrl);
 
-    // After navigating to the page
 await page.waitForSelector('input[jsname="YPqjbf"]');
 await page.type('input[jsname="YPqjbf"]', 'firos@example.com');
 
