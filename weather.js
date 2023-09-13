@@ -1,6 +1,6 @@
 
 const weatherForm = document.getElementById('weatherForm');
-const weatherApi='f629de57de5bdf5d3cf3325a799d4da0';
+const weatherApi='';
 const min_temperature = document.getElementsByClassName('min_temperature')[0];
 const max_temperature=document.getElementsByClassName('max_temperature')[0];
 const locationElement = document.getElementsByClassName('location')[0];
